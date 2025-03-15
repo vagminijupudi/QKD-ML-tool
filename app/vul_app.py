@@ -1,11 +1,8 @@
 import os
 import time
-import pickle
-import tkinter as tk
-from tkinter import filedialog, ttk
 from typing import List, Dict
 from datetime import datetime
-from flask import Flask, render_template, request, send_file, redirect, url_for, Response
+from flask import Flask, render_template, request, send_file
 import tempfile
 
 app = Flask(__name__, static_folder="../static", template_folder="../templates")
@@ -228,5 +225,9 @@ def placeholder_image(width, height):
     # Return the image with the appropriate MIME type
     return send_file(img_io, mimetype='image/png')
 
+port = int(os.getenv("PORT", 5001))  # Get PORT from Railway, default to 5000
+app.run(host="0.0.0.0", port=port)
+print(f"Server running on port {port}")  # Debugging log
+
 if __name__ == "__main__":
-    app.run(port=5001, debug=True)
+    print("Starting vulnerability Detector Web App ")
