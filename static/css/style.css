@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+p {
+    margin-bottom: 0;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+body {
+    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+    color: white;
+}
+
+/* Navigation Bar */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    z-index: 1000; 
+    padding: 15px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 5px;
+    font-family: 'Jost';
+}
+
+/* Create the underline effect */
+ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect: expand the line */
+ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)) ,url('/static/images/bg.png');
+    background-size: cover;
+    
+
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 400;
+    color: #CABBF6;
+    font-family: 'Jost';
+}
+
+.hero .subheading {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hero .description {
+    font-size: 16px;
+    margin-top: 15px;
+    width: 50rem;
+    margin-left: -5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #a88bfc;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #9370f5; /* Slightly darker shade */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
