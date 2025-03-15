@@ -22,7 +22,7 @@ click==8.1.8
 cmake==3.30.0
 colorama==0.4.6
 comm==0.2.2
-conan==2.5.0
+conan==1.43.0
 contourpy==1.2.1
 crayons==0.4.0
 cryptography==42.0.8
@@ -47,7 +47,7 @@ future==1.0.0
 h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
-ibm-cloud-sdk-core==3.20.1
+ibm-cloud-sdk-core==3.19.0
 ibm-platform-services==0.54.2
 idna==3.7
 imbalanced-learn==0.13.0
