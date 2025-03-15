@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, send_file, jsonify
-import qiskit
-from qiskit import QuantumCircuit, transpile, assemble
+from qiskit import QuantumCircuit, transpile
 from qiskit_aer import AerSimulator  # Use local Aer simulator only
-from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2
 from numpy.random import randint
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
@@ -12,7 +10,6 @@ import secrets
 import string
 import tempfile
 import logging
-import tkinter as tk
 import time 
 import smtplib
 from email.mime.text import MIMEText
