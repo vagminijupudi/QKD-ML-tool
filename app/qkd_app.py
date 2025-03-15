@@ -419,7 +419,8 @@ def share_email():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 port = int(os.getenv("PORT", 5000))  # Get PORT from Railway, default to 5000
+app.run(host="0.0.0.0", port=port)
+print(f"Server running on port {port}")  # Debugging log
 if __name__ == '__main__':
-    print("Starting Quantum Encryption Web App on http://127.0.0.1:5000")
-    app.run(host="0.0.0.0", port=port)
+    print("Starting Quantum Encryption Web App ")
 
